@@ -1,0 +1,98 @@
+<!-- Strona stworzona na potrzeby pierwszego projektu 
+    z Technik Internetowych przez Lukasza Radzika -->
+
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+    <title>Rzut ukośny - Łukasz Radzik</title>
+    <meta charset="UTF-8">
+    <script src='js/canvas.js'></script>
+    <script src='js/scripts.js'></script>
+    <link rel="stylesheet" href="css/stylesheet.css">
+</head>
+
+<body>
+
+    <header>
+        <h3>Rzut ukośny</h3>
+        <img src="pictures/parabola.png" id="entryImage" alt="Rzut ukośny" width="450" height="250">
+    </header>
+
+    <!-- Kontener przechowuje dwie główne częśći strony 
+    -> menu oraz część wizualizacyjną  -->
+    <div class="container">
+
+        <!-- Menu -> odpowiada za wyświetlanie teorii -->
+        <div class="menu">
+            <div id="theory" onclick="showTheory()" onmouseover="mouseOverTheory()" onmouseout="mouseOutTheory()">
+                Teoria
+            </div>
+            <article id="theoryCore">
+                <h4>Rzut ukośny – ruch w jednorodnym polu grawitacyjnym z prędkością początkową o kierunku ukośnym do kierunku pola. Ruch ten odpowiada ruchowi ciała rzuconego pod kątem do poziomu. Za rzut ukośny uznaje się też ruch ciała w kierunku ukośnym
+                    do jednorodnego pola elektrycznego. Rzut ukośny w przypadku braku oporów ośrodka można rozważać jako ruch składający się z rzutu pionowego w górę oraz ruchu jednostajnego prostoliniowego.</h4>
+                <button type="button" id="button1" onclick="showMoreInformation()">Więcej informacji</button>
+            </article>
+            <article id="moreTheory">
+                <h4>Ciało porusza się z prędkością, której wektor skierowany bywa ukośnie - pod kątem alfa do poziomu. Prędkość możemy rozłożyć na dwie składowe - pionową i poziomą (analogia do dodawania wektorów). Tak więc szybkość ukośna v0 to oryginalnie
+                    prędkości składowe: v0x i v0y (rzuty v0 na osie układu współrzędnych). Wartości wektorów składowych możemy obliczyć z funkcji trygonometrycznych. Jeżeli znamy kąt, jaki tworzy nasz wektor prędkości, umiemy wyznaczyć składowe vx i vy:
+                    v0x = v0 cos(alpha) v0 y, = v_0 sin(alpha) Możemy już artykułować o dwóch ruchach ciała. Ruch poziomy, jednostajny - bez przyspieszenia, z nadaną prędkością v0x. Położenie, odległość ciała w danej chwili, możemy kojarzyć z drogą w
+                    ruchu jednostajnym (oznaczmy je x). Wzór na drogę s=vt. x=v0x t Ruch w kierunku pionowym to drgnienie opóźniony, z przyspieszeniem ziemskim zwróconym ku Ziemi. Prędkość v0y skierowana w górę, 'spowalniana' poprzez przyspieszenie -
+                    sytuacja jeśli w rzucie pionowym. Położenie w linii pionowej, czyli wysokość, obliczymy jeśli drogę w ruchu opóźnionym. y=v0y t - (g t^2)/2 Równanie toru Jeśli podstawimy w powyższych równania wzory na odpowiednie prędkości, uzyskamy
+                    x=v0 cos(alpha) t y=v0sin(alpha) - (g t^2)/2 Dzięki temu równaniu możemy narysować w układzie współrzędnych tor lotu (jest to równianie paraboli) i wyznaczyć inne wzory. Równanie to pokazuje zależność pomiędzy wysokością a odległością
+                    od punktu wyrzutu (o ile znamy szybkość początkową i kąt wyrzutu).
+                </h4>
+            </article>
+
+        </div>
+
+        <!-- Visualisation -> odpowiada za wyświetlanie wizualizacji -->
+        <div class="visualisation">
+            <div id="showPlot" onclick="showPlot()" onmouseover="mouseOverShowPlot()" onmouseout="mouseOutShowPlot()">
+                Wizualizacja
+            </div>
+            <div id="plot">
+                <form name="formula"></form>
+                <table>
+                    <tr>
+                        <td>
+                            <p>Kąt wyrzutu kulki względem podłoża (w stopniach)</p>
+                        </td>
+                        <td><input type="text" size="5" id="angle" value="45" /> 0-90</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Prędkość wyrzutu kulki (m/s) </p>
+                        </td>
+                        <td><input type="text" size="5" id="velocity" value="45" /> 0-60</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <p>Początkowa wysokość kulki (m)</p>
+                        </td>
+                        <td><input type="text" size="5" id="height" value="0" /> 0-200</td>
+                    </tr>
+                </table>
+
+                <input type="button" style="width: 200px;" onclick="drawThrow()" value="Rysuj">
+
+                <h1 id="canvasTitle" onmouseover="mouseOver()" onmouseout="mouseOut()">Zmiana położenia obiektu w czasie</h1>
+                <canvas id='canvas' width='600' height='400'>
+        Canvas not supported
+     </canvas>
+
+                <script>
+                    drawGrid();
+                    drawAxes();
+                </script>
+            </div>
+
+            <audio id="audio" src="sounds/3963.mp3"></audio>
+        </div>
+    </div>
+    <footer>
+        <p>Page created by Łukasz Radzik</p>
+    </footer>
+</body>
+
+</html>

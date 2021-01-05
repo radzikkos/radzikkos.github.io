@@ -1,0 +1,126 @@
+header {
+    text-align: center;
+    display: block;
+    font-size: xx-large;
+    border: 2px solid #000000;
+    border-radius: 25px;
+    width: 50%;
+    margin: auto;
+    background-color: rgb(250, 247, 50);
+    margin-bottom: 1%;
+}
+
+body {
+    font-family: Cambria, 'Palatino Linotype', 'Book Antiqua', 'URW Palladio L', serif;
+    background-color: #ebf1c6;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.container p {
+    display: inline
+}
+
+.menu {
+    background-color: rgb(250, 247, 50);
+    border: 2px solid black;
+    padding: 1%;
+    border-radius: 25px;
+}
+
+h4 {
+    text-align: left;
+}
+
+#theory {
+    text-align: center;
+    border: 2px dashed #000000;
+    color: darkblue;
+    font-size: xx-large;
+    background-color: #52C3F0;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 1%;
+}
+
+#theoryCore {
+    display: none;
+    white-space: pre-line;
+    width: 100%;
+    text-align: center;
+    border: 2px dashed #f69c55;
+    /* text-align: left; */
+    margin-bottom: 1%;
+}
+
+#button1 {
+    margin-bottom: 2%;
+}
+
+#moreTheory {
+    display: none;
+    /* white-space: pre-line; */
+    white-space: unset;
+    width: 100%;
+    /* text-align: left; */
+    text-align: center;
+    border: 2px dashed #f69c55;
+    margin-bottom: 1%;
+}
+
+.visualisation {
+    border: 2px solid black;
+    border-radius: 25px;
+    padding: 1%;
+    background-color: rgb(250, 247, 50);
+}
+
+#showPlot {
+    text-align: center;
+    border: 2px dashed #000000;
+    color: darkblue;
+    font-size: xx-large;
+    background-color: #52C3F0;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 1%;
+}
+
+#plot {
+    display: none;
+    width: 100%;
+    text-align: center;
+    border: 2px dashed #f69c55;
+}
+
+#canvasTitle {
+    margin: auto;
+    width: 60%;
+}
+
+#canvas {
+    margin: 10px;
+    background: #ffffff;
+    border: thin inset #aaaaaa;
+}
+
+table {
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+
+footer {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+}
